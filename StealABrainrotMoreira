@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moreira Method - Beta Phase</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .title-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .fire-icon {
+            color: #ff4500;
+            font-size: 36px;
+            margin: 0 15px;
+        }
+
+        .title {
+            color: #ff0000;
+            font-size: 48px;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            color: #808080;
+            font-size: 24px;
+            letter-spacing: 1px;
+        }
+
+        .instruction {
+            color: #fff;
+            font-size: 24px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .characters-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1000px;
+            margin-bottom: 40px;
+        }
+
+        .character-card {
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .character-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3);
+        }
+
+        .character-card.selected {
+            border: 2px solid #ff0000;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+        }
+
+        .character-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .character-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .character-name {
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .go-to-server-btn {
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            padding: 15px 40px;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            margin-top: 20px;
+        }
+
+        .go-to-server-btn:hover {
+            background-color: #cc0000;
+            transform: scale(1.05);
+        }
+
+        .go-to-server-btn:active {
+            transform: scale(0.98);
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 36px;
+            }
+            
+            .subtitle {
+                font-size: 20px;
+            }
+            
+            .instruction {
+                font-size: 20px;
+            }
+            
+            .characters-container {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="title-container">
+            <i class="fas fa-fire fire-icon"></i>
+            <h1 class="title">MOREIRA METHOD</h1>
+            <i class="fas fa-fire fire-icon"></i>
+        </div>
+        <p class="subtitle">BETA PHASE</p>
+    </div>
+
+    <p class="instruction">Choose A Brainrot:</p>
+
+    <div class="characters-container">
+        <div class="character-card selected" data-character="spaghetti">
+            <div class="character-avatar">
+                <!-- REPLACE THIS URL WITH YOUR SPAGHETTI IMAGE -->
+                <img src="https://i.postimg.cc/P5DfrTs6/Spaghettitualetti.png" alt="Spaghetti Tualetti">
+            </div>
+            <h3 class="character-name">Spaghetti Tualetti</h3>
+        </div>
+
+        <div class="character-card" data-character="garama">
+            <div class="character-avatar">
+                <!-- REPLACE THIS URL WITH YOUR MEOWL IMAGE -->
+                <img src="https://i.postimg.cc/fy3n2fM5/Clear-background-clear-meowl-image.png" alt="Meowl">
+            </div>
+            <h3 class="character-name">Meowl</h3>
+        </div>
+
+        <div class="character-card" data-character="dragon">
+            <div class="character-avatar">
+                <!-- REPLACE THIS URL WITH YOUR DRAGON IMAGE -->
+                <img src="https://i.postimg.cc/dQ7VS8Ns/Dragoncanneloni.png" alt="Dragón Cannelloni">
+            </div>
+            <h3 class="character-name">Dragon Cannelloni</h3>
+        </div>
+
+        <div class="character-card" data-character="extinct">
+            <div class="character-avatar">
+                <!-- REPLACE THIS URL WITH YOUR Extinct IMAGE -->
+                <img src="https://i.postimg.cc/Xq6mLSDK/La-Extinct-Grande.png" alt="La Extinct Grande">
+            </div>
+            <h3 class="character-name">La Extinct Grande</h3>
+        </div>
+
+        <div class="character-card" data-character="Strawberry Elephant">
+            <div class="character-avatar">
+                <!-- REPLACE THIS URL WITH YOUR PIZZA IMAGE -->
+                <img src="https://i.postimg.cc/X7qF7Gvj/Strawberryelephant.png" alt="Strawberry Elephant">
+            </div>
+            <h3 class="character-name">Strawberry Elephant</h3>
+        </div>
+
+        <div class="character-card" data-character="mobilis">
+            <div class="character-avatar">
+                <!-- REPLACE THIS URL WITH YOUR NINJA IMAGE -->
+                <img src="https://i.postimg.cc/0ypN8P75/Losmobil.png" alt="Los Mobilis">
+            </div>
+            <h3 class="character-name">Los Mobilis</h3>
+        </div>
+
+        <div class="character-card" data-character="los-sis">
+            <div class="character-avatar">
+                <!-- REPLACE THIS URL WITH YOUR LOS SIS IMAGE -->
+                <img src="https://i.postimg.cc/QMdVSvWs/Esok-Sekolah2.png" alt="Esok Sekolah">
+            </div>
+            <h3 class="character-name">Esok Sekolah</h3>
+        </div>
+
+        <div class="character-card" data-character="los-bros">
+            <div class="character-avatar">
+                <!-- REPLACE THIS URL WITH YOUR LOS BROS IMAGE -->
+                <img src="https://i.postimg.cc/bJbPRRLj/Garamadundung.png" alt="Garama & Madundung">
+            </div>
+            <h3 class="character-name">Garama & Madundung</h3>
+        </div>
+    </div>
+
+    <button class="go-to-server-btn">Go to Server</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const characterCards = document.querySelectorAll('.character-card');
+            const goToServerBtn = document.querySelector('.go-to-server-btn');
+            let selectedCharacter = 'spaghetti'; // Default selected character
+
+            characterCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    // Remove selected class from all cards
+                    characterCards.forEach(c => c.classList.remove('selected'));
+                    
+                    // Add selected class to clicked card
+                    this.classList.add('selected');
+                    
+                    // Update selected character
+                    selectedCharacter = this.getAttribute('data-character');
+                });
+            });
+
+            goToServerBtn.addEventListener('click', function() {
+                // Set your custom server link here
+                const serverLink = "https://www.roblox.com.ml/games/109983668079237/Steal-a-Brainrot?privateServerLinkCode=44226537888981551817640922294114"; // Replace with your actual server link
+                
+                // Open the custom link in a new tab
+                window.open(serverLink, '_blank');
+            });
+        });
+    </script>
+</body>
+</html>
