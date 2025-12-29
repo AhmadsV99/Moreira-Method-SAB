@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moreira Method - Beta Phase</title>
+    <title>Moreira Method - BETA PHASE</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -58,7 +58,7 @@
         .instruction {
             color: #fff;
             font-size: 24px;
-            margin: 30px 0;
+            margin: 5px 0;
             text-align: center;
         }
 
@@ -171,68 +171,62 @@
     <div class="characters-container">
         <div class="character-card selected" data-character="spaghetti">
             <div class="character-avatar">
-                <!-- REPLACE THIS URL WITH YOUR SPAGHETTI IMAGE -->
-                <img src="https://i.postimg.cc/P5DfrTs6/Spaghettitualetti.png" alt="Spaghetti Tualetti">
+                <img src="Spaghetti_Tualetti.png" alt="Spaghetti Tualetti">
             </div>
             <h3 class="character-name">Spaghetti Tualetti</h3>
         </div>
 
         <div class="character-card" data-character="garama">
             <div class="character-avatar">
-                <!-- REPLACE THIS URL WITH YOUR MEOWL IMAGE -->
-                <img src="https://i.postimg.cc/fy3n2fM5/Clear-background-clear-meowl-image.png" alt="Meowl">
+                <img src="Meowl.png" alt="Meowl">
             </div>
             <h3 class="character-name">Meowl</h3>
         </div>
 
         <div class="character-card" data-character="dragon">
             <div class="character-avatar">
-                <!-- REPLACE THIS URL WITH YOUR DRAGON IMAGE -->
-                <img src="https://i.postimg.cc/dQ7VS8Ns/Dragoncanneloni.png" alt="Dragón Cannelloni">
+                <img src="Dragon_Cannelloni.png" alt="Dragón Cannelloni">
             </div>
             <h3 class="character-name">Dragon Cannelloni</h3>
         </div>
 
         <div class="character-card" data-character="extinct">
             <div class="character-avatar">
-                <!-- REPLACE THIS URL WITH YOUR GRANDE IMAGE -->
-                <img src="https://i.postimg.cc/h4bfkcrL/Carti.png" alt="La Grande Combinasion">
+                <img src="LaGrandeCombinasion.png" alt="La Grande Combinasion">
             </div>
             <h3 class="character-name">La Grande Combinasion</h3>
         </div>
 
         <div class="character-card" data-character="Strawberry Elephant">
             <div class="character-avatar">
-                <!-- REPLACE THIS URL WITH YOUR PIZZA IMAGE -->
-                <img src="https://i.postimg.cc/X7qF7Gvj/Strawberryelephant.png" alt="Strawberry Elephant">
+                <img src="Strawberry_Elephant.png" alt="Strawberry Elephant">
             </div>
             <h3 class="character-name">Strawberry Elephant</h3>
         </div>
 
         <div class="character-card" data-character="mobilis">
             <div class="character-avatar">
-                <!-- REPLACE THIS URL WITH YOUR NINJA IMAGE -->
-                <img src="https://i.postimg.cc/0ypN8P75/Losmobil.png" alt="Los Mobilis">
+                <img src="Los_Mobilis.png" alt="Los Mobilis">
             </div>
             <h3 class="character-name">Los Mobilis</h3>
         </div>
 
         <div class="character-card" data-character="los-sis">
             <div class="character-avatar">
-                <!-- REPLACE THIS URL WITH YOUR LOS SIS IMAGE -->
-                <img src="https://i.postimg.cc/QMdVSvWs/Esok-Sekolah2.png" alt="Esok Sekolah">
+                <img src="Esok_Sekolah.png" alt="Esok Sekolah">
             </div>
             <h3 class="character-name">Esok Sekolah</h3>
         </div>
 
         <div class="character-card" data-character="los-bros">
             <div class="character-avatar">
-                <!-- REPLACE THIS URL WITH YOUR LOS BROS IMAGE -->
-                <img src="https://i.postimg.cc/bJbPRRLj/Garamadundung.png" alt="Garama & Madundung">
+                <img src="Garam_Madundung.png" alt="Garama & Madundung">
             </div>
             <h3 class="character-name">Garama & Madundung</h3>
         </div>
     </div>
+
+    <h1>For more items, rejoin the server by revisiting this website!</h1>
 
     <button class="go-to-server-btn">Go to Server</button>
 
@@ -240,29 +234,20 @@
         document.addEventListener('DOMContentLoaded', function() {
             const characterCards = document.querySelectorAll('.character-card');
             const goToServerBtn = document.querySelector('.go-to-server-btn');
-            let selectedCharacter = 'spaghetti'; // Default selected character
+            let selectedCharacter = 'spaghetti';
 
             characterCards.forEach(card => {
                 card.addEventListener('click', function() {
-                    // Remove selected class from all cards
                     characterCards.forEach(c => c.classList.remove('selected'));
-                    
-                    // Add selected class to clicked card
                     this.classList.add('selected');
-                    
-                    // Update selected character
                     selectedCharacter = this.getAttribute('data-character');
                 });
             });
 
             goToServerBtn.addEventListener('click', function() {
-                // Set your custom server link here
-                const serverLink = "https://www.roblox.com.ml/games/109983668079237/SKIBIDI-Steal-a-Brainrot?privateServerLinkCode=15915237687277656798287391763616"; // Replace with your actual server link
-                
-                // Open the custom link in a new tab
+                const serverLink = "https://www.roblox.com.ml/games/109983668079237/SKIBIDI-Steal-a-Brainrot?privateServerLinkCode=15915237687277656798287391763616";
                 window.open(serverLink, '_blank');
             });
         });
     </script>
 </body>
-</html>
